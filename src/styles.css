@@ -1,0 +1,135 @@
+:root {
+    --border-radius-default: clamp(1rem, 1vw, 3rem);
+    --large-text: clamp(1rem, 0.5vw + 1rem, 2rem);
+    --small-text: 1rem;
+    --heading: clamp(1.3rem, 2vw + 1rem, 5rem);
+    --sub-heading: clamp(1.3rem, 1.2vw + 1rem, 4rem);
+    --icon-font-size: clamp(1rem, 2vw + 1rem, 3rem);
+    --default-white: rgb(236, 236, 236);
+    --default-black: rgb(32, 30, 30);
+    --default-gray: #dadadc;
+    --default-dark-gray: #737373;
+    --default-light-gradient: linear-gradient(
+        45deg,
+        #fd5c6c 10%,
+        #ffe0bd 50%,
+        #ff88ca 100%
+    );
+    --small-black-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    --small-white-text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    --portrait-height: 500px;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
+        url("/fonts/BebasNeue-Regular.woff") format("woff");
+}
+*:focus-visible {
+    outline: 2px pink solid;
+}
+.light {
+    background-color: var(--default-gray);
+}
+.dark {
+    background-color: var(--default-black);
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease-out;
+    background-color: #131a2a;
+    overflow-x: hidden;
+}
+
+.heading {
+    font-size: var(--heading);
+}
+.large-text {
+    font-size: var(--large-text);
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+    width: 100%;
+    display: block;
+}
+.raleway-font-bold {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.baskerville {
+    font-family: "Libre Baskerville", serif;
+    font-style: normal;
+}
+.bebas-neue {
+    font-family: "Bebas Neue", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 400 !important;
+    font-style: normal;
+}
+.raleway-font-regular {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.arial-font-regular {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.arial-font-regular strong,
+.arial-font-regular b {
+    font-weight: 700;
+}
+.raleway-font-regular strong,
+.raleway-font-regular b {
+    font-weight: 800;
+}
+.arial-font-regular i,
+.arial-font-regular em,
+.raleway-font-regular i,
+.raleway-font-regular em {
+    font-style: italic;
+}
+.righteous-bold {
+    font-family: "Righteous", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.playfair-less-bold {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+.main-content {
+    flex: 2;
+}
+.sidebar {
+    min-height: 100vh;
+    height: auto;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+.sidebar.light {
+    background-color: var(--default-black);
+}
+.sidebar.dark {
+    background-color: var(--default-white);
+}

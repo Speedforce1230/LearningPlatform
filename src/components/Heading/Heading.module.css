@@ -1,0 +1,17 @@
+.heading {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+
+    z-index: 1000;
+}
+.heading::selection,
+.heading b::selection {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.heading::-moz-selection,
+.heading b::-moz-selection {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
