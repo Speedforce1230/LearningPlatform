@@ -1,3 +1,4 @@
+import BackgroundImage from "../BackgroundImage/BackgroundImage";
 import BaseText from "../BaseText/BaseText";
 import Heading from "../Heading";
 import styles from "./Landing.module.css";
@@ -11,6 +12,11 @@ function Landing() {
             >
                 Hello World
             </Heading>
+            <BackgroundImage
+                image="images/cover_art2"
+                fileExtension="jpg"
+                backgroundFilter="shadow"
+            ></BackgroundImage>
         </div>
     );
 }

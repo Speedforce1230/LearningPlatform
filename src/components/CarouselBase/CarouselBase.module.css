@@ -1,0 +1,42 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1em;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1%;
+    width: 100%;
+}
+.button {
+    width: clamp(50px, 10vw, 100px);
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    background-color: inherit;
+    z-index: 3;
+}
+.icon {
+    width: 100%;
+    height: auto;
+}
+.button:hover {
+    background-color: var(--default-dark-gray);
+}
+.button:active {
+    background-color: var(--default-gray);
+}
+.button:disabled {
+    color: var(--default-black);
+}
+.button:disabled:hover {
+    background-color: inherit;
+    cursor: default;
+}

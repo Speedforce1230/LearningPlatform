@@ -1,0 +1,24 @@
+.background-wrapper {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.shadow {
+  filter: brightness(calc(var(--brightness-level) * 100%));
+  z-index: 0;
+}
+.blur {
+  filter: blur(var(--blur));
+}

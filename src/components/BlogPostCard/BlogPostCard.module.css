@@ -1,0 +1,115 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: var(--border-radius-default);
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    user-select: none;
+    transition: transform 0.3s ease-out;
+}
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    user-select: none;
+    z-index: 0;
+    pointer-events: none;
+}
+.reading-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    overflow: visible;
+    filter: drop-shadow(0 0 10px oklch(var(--pretty-color)))
+        drop-shadow(0 0 20px oklch(var(--pretty-color)))
+        drop-shadow(0 0 40px oklch(var(--pretty-color)));
+}
+.grayscale {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: grayscale(100%);
+}
+.seperator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(1px, 1vw, 5px);
+    background-color: var(--default-white);
+}
+.text-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: clamp(1px, 0.1vw, 10px);
+    position: absolute;
+    bottom: 0;
+    transform-origin: top;
+    backdrop-filter: blur(5px);
+    background: var(--gradient-color);
+    -webkit-mask-image: linear-gradient(
+        to top,
+        black 0%,
+        black 50%,
+        transparent 100%
+    );
+    height: 50%;
+    mask-image: linear-gradient(to top, black 0%, black 50%, transparent 100%);
+    left: 0;
+    z-index: 3;
+    padding: 1em;
+    width: 100%;
+}
+.heading-container {
+    position: relative;
+    padding-bottom: 0.5em;
+    z-index: 1000;
+    overflow: hidden;
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+}
+.icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    color: oklch(calc(var(--L) + 0.1) var(--C) var(--H));
+    transition: color 0.3s ease-out;
+    overflow: visible;
+}
+.icon:hover {
+    color: oklch(var(--L) calc(var(--C) * 1.1) var(--H));
+}
+@media (max-width: 900px) {
+    .text-container {
+        padding: 0.3em;
+        mask-image: linear-gradient(
+            to top,
+            black 0%,
+            black 30%,
+            transparent 70%
+        );
+        height: 100%;
+        transform: translateX(0.5px);
+    }
+    .heading-container {
+        padding: 0;
+    }
+}

@@ -1,0 +1,21 @@
+.svg-carousel {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 50vw;
+    padding: 1em;
+}
+
+.logo {
+    position: relative;
+    width: clamp(80px, 6vw + 1rem, 300px);
+}
+
+@media (max-width: 768px) {
+    .svg-carousel {
+        width: 70vw;
+    }
+}

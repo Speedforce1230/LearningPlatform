@@ -1,0 +1,12 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateZ(0);
+    will-change: transform;
+    z-index: 1;
+}
+.slider > * {
+    flex: 0 0 auto;
+}
