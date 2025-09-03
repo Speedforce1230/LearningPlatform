@@ -2,11 +2,35 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## How to run the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install git (if you're unsure if you have it or not, you can run `git` in any terminal to check).
 
-## Expanding the ESLint configuration
+2. Install node.js (if you're unsure if you have it or not, you can run `npm` in any terminal to check).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Create a new folder and run
+
+   ```bash
+   git clone <URL OF THIS REPO, COPY FROM THE ADDRESS BAR>
+   # You might have to provide your github password if you're doing it for the first time.
+   ```
+
+5. In your folder, you should now have a folder called 'LearningPlatform', run these commands
+
+   ```bash
+   cd LearningPlatform
+   npm install
+   npm run dev
+   ```
+
+7. In your terminal, the project should now run at localhost, you can open it in your browser.
+
+### Contributors
+
+Thanks to 
+
+- [@Kudrat](https://github.com/Kdtprog)
+- [@Animesh]()
+- [@Utkarsh](https://github.com/utkwalia)
+- [@Arvind](https://github.com/Aary9762)
+- [@Vasu](https://github.com/Speedforce1230)
