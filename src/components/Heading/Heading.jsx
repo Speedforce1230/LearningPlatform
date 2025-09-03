@@ -1,6 +1,6 @@
 import getFontClasses from "../../utility/getFont";
 import styles from "./Heading.module.css";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 function Heading({
     children,
