@@ -1,5 +1,5 @@
 import styles from "./Slider.module.css";
-import { motion } from "motion/react";
+
 function Slider({
     children,
     initialX = 0,

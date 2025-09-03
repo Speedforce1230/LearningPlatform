@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useRef, useState } from "react";
-import BaseText from "../../basic/BaseText";
+import BaseText from "../BaseText/BaseText";
 import ImageBox from "../ImageBox/ImageBox";
 import styles from "./BlogPostCard.module.css";
 import { motion } from "framer-motion";
-import Heading from "../../basic/Heading";
+import Heading from "../Heading";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icons } from "../../../data/Blog/blogPostCard";
-import usePrettyColor from "../../../utility/usePrettyColor";
-import clampNumber from "../../../utility/clamp";
-import convertToUTC from "../../../utility/convertToUTC";
+import { icons } from "../../data/icons/icons";
+import usePrettyColor from "../../utility/usePrettyColor";
+import clampNumber from "../../utility/clamp";
+import convertToUTC from "../../utility/convertToUTC";
 function BlogPostCard({
     className = "",
     imageLoading = "eager",
@@ -66,7 +66,8 @@ function BlogPostCard({
         ro.observe(heading);
         ro.observe(text);
         return () => ro.disconnect();
-    }, [headingRef, textRef]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     const totalDistance = headingScrollWidth - textWidth + 5;
     const captilizedType = type.charAt(0).toUpperCase() + type.slice(1);
     const isAnimating = shouldAnimate || textReveal === "noReveal";
@@ -97,8 +98,7 @@ function BlogPostCard({
         ...colorStyles,
     };
     return (
-        <Link
-            to={to}
+        <div
             onFocus={() => setShouldAnimate(true)}
             onBlur={() => setShouldAnimate(false)}
             aria-labelledby={`date-${convertToUTC(
@@ -273,7 +273,7 @@ function BlogPostCard({
                     </BaseText>
                 </motion.div>
             </motion.div>
-        </Link>
+        </div>
     );
 }
 export default BlogPostCard;
