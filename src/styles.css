@@ -18,10 +18,25 @@
     --small-black-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     --small-white-text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
     --portrait-height: 500px;
+    --default-green: #2ecc71;
+    --default-gradient: linear-gradient(
+        to bottom,
+        hsl(222deg 43% 9%) 0%,
+        hsl(223deg 44% 12%) 21%,
+        hsl(224deg 45% 15%) 30%,
+        hsl(224deg 47% 18%) 39%,
+        hsl(224deg 48% 20%) 46%,
+        hsl(217deg 47% 24%) 54%,
+        hsl(202deg 46% 27%) 61%,
+        hsl(190deg 49% 30%) 69%,
+        hsl(180deg 56% 32%) 79%,
+        hsl(173deg 70% 35%) 100%
+    );
 }
 @font-face {
     font-family: "Bebas Neue";
-    src: url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
+    src:
+        url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
         url("/fonts/BebasNeue-Regular.woff") format("woff");
 }
 *:focus-visible {

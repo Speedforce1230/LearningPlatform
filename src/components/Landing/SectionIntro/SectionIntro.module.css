@@ -1,0 +1,24 @@
+.logo {
+    background: linear-gradient(45deg, #4ade80 0%, var(--default-white) 80%);
+    background-clip: text;
+}
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.underline {
+    width: 100%;
+    height: clamp(0.5px, 0.3vh, 5px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--default-green);
+}

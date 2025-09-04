@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+    width: 100%;
+    min-height: 10vh;
+    align-items: center;
+    backdrop-filter: blur(20px);
+
+    z-index: 1000;
+    position: fixed;
+}
+.navbar::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(37, 36, 36, 1);
+    z-index: -1;
+}
+.text {
+    text-decoration: none;
+    font-size: var(--large-text);
+    transition: color 0.3s ease-out;
+}
