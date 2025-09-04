@@ -1,0 +1,19 @@
+.snow {
+    position: absolute;
+    top: -10px; /* Start just above the top of the screen */
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1000;
+    /* Link the snowflake to the 'fall' animation */
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.snowflake-container {
+    width: 100%;
+    height: 100%;
+}
+.snowfall-canvas {
+    width: 100%;
+    height: 100%;
+}

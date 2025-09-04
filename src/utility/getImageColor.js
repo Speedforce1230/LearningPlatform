@@ -1,7 +1,7 @@
 import { loadImageFromCache, saveImageToCache } from "./imageCache";
 
 const imageCache = new Map();
-// Returns a promise of an image.
+// Returns a promise of an image. Asynchronous task.
 const loadImage = (src) => {
     return new Promise((resolve, reject) => {
         const img = new Image();
@@ -11,6 +11,7 @@ const loadImage = (src) => {
         img.onerror = () => reject(new Error("Failed to load image"));
     });
 };
+// Checking index DB, loads image if it's not present and then saves it to IDB.
 const getImage = async (imgSrc) => {
     let image = await loadImageFromCache(imgSrc);
     if (!image) {

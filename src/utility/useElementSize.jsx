@@ -1,12 +1,14 @@
 import { useLayoutEffect, useState } from "react";
 
-function useElementWidth({ ref, onResize = () => {} }) {
+function useElementSize(ref, onResize = () => {}) {
     const [width, setWidth] = useState(0);
+    const [height, setHeight] = useState(0);
     useLayoutEffect(() => {
         if (!ref.current) return;
         const object = ref.current;
         const update = () => {
             setWidth(object.offsetWidth);
+            setHeight(object.offsetHeight);
             onResize();
         };
         requestAnimationFrame(update);
@@ -14,6 +16,6 @@ function useElementWidth({ ref, onResize = () => {} }) {
         ro.observe(object);
         return () => ro.disconnect();
     }, [ref, onResize]);
-    return width;
+    return { width, height };
 }
-export default useElementWidth;
+export default useElementSize;
